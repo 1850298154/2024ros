@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/h/vs_Community/项目管理/练习/cpp速成/速成c++面向对象/cpp面向对象-补充/2024ros/56_cmake/add.h
+
+/mnt/h/vs_Community/项目管理/练习/cpp速成/速成c++面向对象/cpp面向对象-补充/2024ros/56_cmake/main.cpp
+iostream
+-
+add.h
+/mnt/h/vs_Community/项目管理/练习/cpp速成/速成c++面向对象/cpp面向对象-补充/2024ros/56_cmake/add.h
+

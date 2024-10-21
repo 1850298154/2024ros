@@ -1,0 +1,1 @@
+/usr/bin/c++     CMakeFiles/cmlearn.dir/main.cpp.o math/CMakeFiles/math.dir/add.cpp.o  -o cmlearn 

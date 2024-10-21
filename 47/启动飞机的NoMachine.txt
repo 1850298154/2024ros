@@ -1,0 +1,127 @@
+udssh user@192.168.1.126
+
+sudo systemctl stop gdm3
+
+sudo /etc/NX/nxserver --restart
+
+
+
+ssh user@192.168.1.126
+
+sudo systemctl stop gdm3
+
+sudo /etc/NX/nxserver --restart
+
+
+
+
+
+rostopic echo /typhoon_h480_0/mavros/global_position/global
+rostopic echo /typhoon_h480_0/mavros/local_position/pose
+rostopic echo /typhoon_h480_0/mavros/setpoint_raw/global 
+
+rostopic echo /typhoon_h480_0/mavros/global_position/global
+
+roslaunch px4 mavros_posix_sitlzz.launch  ;
+
+cd px4  ;  
+roslaunch px4.launch  ;
+
+cd xuros_ws/  ;   
+source devel/setup.bash  ;   rosrun myros  myros   ;
+
+cd FastDDSnew/  ;  
+./start.sh  ;
+
+
+rostopic pub -r 10 /typhoon_h480_0/mavros/setpoint_raw/global mavros_msgs/GlobalPositionTarget "header:
+  seq: 0
+  stamp: {secs: 0, nsecs: 0}
+  frame_id: ''
+coordinate_frame: 6
+type_mask: 2552
+latitude: 47.3977423
+longitude: 8.5455928
+altitude: 5
+velocity: {x: 0.0, y: 0.0, z: 0.0}
+acceleration_or_force: {x: 0.0, y: 0.0, z: 0.0}
+yaw: 0.7
+yaw_rate: 0.0"
+
+
+
+收到集群信息
+{"UAVs": [{"order": 20, "type": 1, "task": 1, "taskID": 20, "points": [{"wp_id": 0, "lat": 40.054652, "lon": 116.166962, "alt": 20.0, "yaw": 0.0}, {"wp_id": 1, "lat": 47.39797807063797, "lon": 8.54560072591999, "alt": 20.0, "yaw": 90.0}, {"wp_id": 2, "lat": 47.39797308195227, "lon": 8.545602779095535, "alt": 20.0, "yaw": 157.6295792379684}, {"wp_id": 3, "lat": 47.3979276880209, "lon": 8.545524919262867, "alt": 20.0, "yaw": 239.75690902833423}, {"wp_id": 4, "lat": 47.39798171384223, "lon": 8.545502683960219, "alt": 20.0, "yaw": 337.6294990574357}, {"wp_id": 5, "lat": 47.3979853569629, "lon": 8.545404641986888, "alt": 20.0, "yaw": 272.12806249075174}, {"wp_id": 6, "lat": 40.054652, "lon": 116.166962, "alt": 150.2, "yaw": 93.90340823159305}]}, {"order": 21, "type": 1, "task": 1, "taskID": 21, "points": [{"wp_id": 0, "lat": 40.05565199999999, "lon": 116.167962, "alt": 20.0, "yaw": 0.0}, {"wp_id": 1, "lat": 47.3979853569629, "lon": 8.545404641986888, "alt": 20.0, "yaw": 90.0}, {"wp_id": 2, "lat": 47.39788229403682, "lon": 8.545447059564355, "alt": 20.0, "yaw": 157.62941890958075}, {"wp_id": 3, "lat": 40.05565199999999, "lon": 116.167962, "alt": 50.5, "yaw": 93.90278908329586}]}]}
+0号机航点lat : 40.0547
+0号机航点lat : 47.398
+0号机航点lat : 47.398
+0号机航点lat : 47.3979
+0号机航点lat : 47.398
+0号机航点lat : 47.398
+0号机航点lat : 40.0547
+1号机航点lat : 40.0557
+1号机航点lat : 47.398
+1号机航点lat : 47.3979
+1号机航点lat : 40.0557
+发送集群信息
+         Send order=        20
+         Send order=        21
+收到集群信息
+
+
+收到集群信息
+{"UAVs": [{"order": 2, "type": 1, "task": 1, "taskID": 2, "points": [{"wp_id": 0, "lat": 47.397832, "lon": 8.5457255, "alt": 20.0, "yaw": 0.0}, {"wp_id": 1, "lat": 47.397935551643265, "lon": 8.545618839444716, "alt": 20.0, "yaw": 90.0}, {"wp_id": 2, "lat": 47.39798240065563, "lon": 8.545621283756157, "alt": 20.0, "yaw": 2.986655461142277}, {"wp_id": 3, "lat": 47.397981167390434, "lon": 8.545714278332836, "alt": 20.0, "yaw": 90.75979429351844}, {"wp_id": 4, "lat": 47.39797556870024, "lon": 8.545713986215334, "alt": 20.0, "yaw": 182.9867587112906}, {"wp_id": 5, "lat": 47.397832, "lon": 8.5457255, "alt": 47.23077438013511, "yaw": 175.41486120101467}]}, {"order": 1, "type": 1, "task": 1, "taskID": 1, "points": [{"wp_id": 0, "lat": 47.397740199999994, "lon": 8.5455928, "alt": 20.0, "yaw": 0.0}, {"wp_id": 1, "lat": 47.39785551729315, "lon": 8.545428546337048, "alt": 20.0, "yaw": 90.0}, {"wp_id": 2, "lat": 47.39798486696041, "lon": 8.545435294589739, "alt": 20.0, "yaw": 2.9864489812752737}, {"wp_id": 3, "lat": 47.39798363384562, "lon": 8.545528289175124, "alt": 20.0, "yaw": 90.75970156957797}, {"wp_id": 4, "lat": 47.39789553450757, "lon": 8.54552369281862, "alt": 20.0, "yaw": 182.98655222099737}, {"wp_id": 5, "lat": 47.397935551643265, "lon": 8.545618839444716, "alt": 20.0, "yaw": 67.1891634671462}, {"wp_id": 6, "lat": 47.397740199999994, "lon": 8.5455928, "alt": 47.07591644146877, "yaw": 187.59249905060858}]}]}
+0号机航点lat : 47.3978
+0号机航点lat : 47.3979
+0号机航点lat : 47.398
+0号机航点lat : 47.398
+0号机航点lat : 47.398
+0号机航点lat : 47.3978
+1号机航点lat : 47.3977
+1号机航点lat : 47.3979
+1号机航点lat : 47.398
+1号机航点lat : 47.398
+1号机航点lat : 47.3979
+1号机航点lat : 47.3979
+1号机航点lat : 47.3977
+发送集群信息
+         Send order=        2
+收到集群信息
+{"UAVs": [{"order": 2, "type": 0, "task": 1, "taskID": 2, "points": []}, {"order": 1, "type": 0, "task": 1, "taskID": 1, "points": []}]}
+发送集群信息
+收到集群信息
+{"UAVs": [{"order": 2, "type": 0, "task": 1, "taskID": 2, "points": []}, {"order": 1, "type": 0, "task": 1, "taskID": 1, "points": []}]}
+发送集群信息
+收到集群信息
+{"UAVs": [{"order": 2, "type": 0, "task": 1, "taskID": 2, "points": []}, {"order": 1, "type": 0, "task": 1, "taskID": 1, "points": []}]}
+发送集群信息
+184
+FrameHeader1=235
+
+
+
+pub type is : <class 'dict'>
+send successfully!!!!!!!!!!!!!!
+Already Sent data: b'{"UAVs": [{"order": 20, "type": 1, "task": 1, "taskID": 20, "points": [{"wp_id": 0, "lat": 40.054652, "lon": 116.166962, "alt": 20.0, "yaw": 0.0}, {"wp_id": 1, "lat": 47.39797807063797, "lon": 8.54560072591999, "alt": 20.0, "yaw": 90.0}, {"wp_id": 2, "lat": 47.39797308195227, "lon": 8.545602779095535, "alt": 20.0, "yaw": 157.6295792379684}, {"wp_id": 3, "lat": 47.3979276880209, "lon": 8.545524919262867, "alt": 20.0, "yaw": 239.75690902833423}, {"wp_id": 4, "lat": 47.39798171384223, "lon": 8.545502683960219, "alt": 20.0, "yaw": 337.6294990574357}, {"wp_id": 5, "lat": 47.3979853569629, "lon": 8.545404641986888, "alt": 20.0, "yaw": 272.12806249075174}, {"wp_id": 6, "lat": 40.054652, "lon": 116.166962, "alt": 150.2, "yaw": 93.90340823159305}]}, {"order": 21, "type": 1, "task": 1, "taskID": 21, "points": [{"wp_id": 0, "lat": 40.05565199999999, "lon": 116.167962, "alt": 20.0, "yaw": 0.0}, {"wp_id": 1, "lat": 47.3979853569629, "lon": 8.545404641986888, "alt": 20.0, "yaw": 90.0}, {"wp_id": 2, "lat": 47.39788229403682, "lon": 8.545447059564355, "alt": 20.0, "yaw": 157.62941890958075}, {"wp_id": 3, "lat": 40.05565199999999, "lon": 116.167962, "alt": 50.5, "yaw": 93.90278908329586}]}]}'
+Already send msg
+first received is = False  and first send is = False
+Received data: b'{"mission":{"topology":"0","points":[{"lat":47.3978369,"lon":8.5453692,"alt":30,"radius":0},{"lat":47.3979777,"lon":8.5456107,"alt":30,"radius":0},{"lat":47.397989,"lon":8.5453066,"alt":30,"radius":0}],"UAVs":[{"order":20,"flystatus":1,"TrackBegin":0,"TrackEnd":1,"ScoutBegin":0,"ScoutEnd":1,"Strike":0,"lon":116.166962,"lat":40.054652,"alt":150.2},{"order":21,"flystatus":1,"TrackBegin":0,"TrackEnd":1,"ScoutBegin":0,"ScoutEnd":1,"Strike":0,"lon":116.167962,"lat":40.055652,"alt":50.5}],"target_todo":[{"lon":0.0,"lat":0.0,"alt":0.0}],"target_done":[{"lon":0.0,"lat":0.0,"alt":0.0}]}}'
+x, y
+5083058.032967504 6117457.624502619
+self.cur_pos
+[5.08305803e+06 6.11745762e+06 1.50200000e+02]
+self.target_pos
+[15.69748465 17.42650734 20.        ]
+x, y
+5083182.66471767 6117323.354449911
+self.cur_pos
+[5.08318266e+06 6.11732335e+06 5.05000000e+01]
+self.target_pos
+[16.50766171  2.6676493  20.        ]
+pub type is : <class 'dict'>
+send successfully!!!!!!!!!!!!!!
+Already Sent data: b'{"UAVs": [{"order": 20, "type": 0, "task": 1, "taskID": 20, "points": []}, {"order": 21, "type": 0, "task": 1, "taskID": 21, "points": []}]}'
+Already send msg
+first received is = False  and first send is = False
+Received data: b'{"mission":{"topology":"0","points":[{"lat":47.3978369,"lon":8.5453692,"alt":30,"radius":0},{"lat":47.3979777,"lon":8.5456107,"alt":30,"radius":0},{"lat":47.397989,"lon":8.5453066,"alt":30,"radius":0}],"UAVs":[{"order":20,"flystatus":1,"TrackBegin":0,"TrackEnd":1,"ScoutBegin":0,"ScoutEnd":1,"Strike":0,"lon":116.166962,"lat":40.054652,"alt":150.2},{"order":21,"flystatus":1,"TrackBegin":0,"TrackEnd":1,"ScoutBegin":0,"ScoutEnd":1,"Strike":0,"lon":116.167962,"lat":40.055652,"alt":50.5}],"target_todo":[{"lon":0.0,"lat":0.0,"alt":0.0}],"target_done":[{"lon":0.0,"lat":0.0,"alt":0.0}]}}'
+x, y
